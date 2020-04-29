@@ -1,21 +1,20 @@
 function setup() {
-  let navWidth = document.getElementById("nav").offsetWidth;
-  let canvas = createCanvas(windowWidth - navWidth, windowHeight);
-  canvas.parent('canvas');
-  background(255);
+    let navWidth = document.getElementById("nav").offsetWidth;
+    let canvas = createCanvas(windowWidth - navWidth, windowHeight);
+    canvas.parent('canvas');
+    background(0);
 }
 
 function draw() {
-  let x = 10;
-  fill(0);
-  while (x < width) {
-    ellipse(x, height / 2, 10, 10);
-    x = x + 30;
-  }
+    for (let i = 0; i < width; i++) {
+        let rcolor = random(100, 200);
+        stroke(rcolor);
+        line(i, 0, i, height);
+    }
 }
 
 function windowResized() {
-  let navWidth = document.getElementById("nav").offsetWidth;
-  resizeCanvas(windowWidth - navWidth, windowHeight);
-  background(255);
+    let navWidth = document.getElementById("nav").offsetWidth;
+    resizeCanvas(windowWidth - navWidth, windowHeight);
+    background(255);
 }

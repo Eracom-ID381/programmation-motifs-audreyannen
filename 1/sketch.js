@@ -7,8 +7,8 @@ function setup() {
 
 function draw() {
     let x = 10;
-    stroke(50);
-    fill(0);
+    rcolor = color(random(0, 50));
+    stroke(rcolor);
     for (let x = 0; x < width; x = x + 10) {
         for (let y = 0; y < height; y = y + 10)
             line(x, y, width - 20, height - 20);
